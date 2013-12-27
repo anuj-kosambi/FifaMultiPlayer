@@ -1,0 +1,17 @@
+How it works:
+it creates virtual joystick in server and in the local network, send fifa controll of client to the server which can be mapped according to Server's Fifa joystick Controlls.
+Needed:
+VJOY virtual joystick Driver
+(Optional) Screen Duplication on Other PC ..Like MaxiVista TeamViewer etc....
+
+
+Steps:
+1)Server:
+-Add ip into textbox 
+-MakeServer
+-RunFifa
+-tell friend to connect on ur ip.
+2)Client:
+-Add Server ip in the textbox
+-Set ur Control in the second tab
+-connect and enjoy.
