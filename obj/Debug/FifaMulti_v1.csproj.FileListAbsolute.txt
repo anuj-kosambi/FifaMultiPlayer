@@ -1,0 +1,9 @@
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\bin\Debug\FifaMulti_v1.exe.config
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\bin\Debug\FifaMulti_v1.exe
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\bin\Debug\FifaMulti_v1.pdb
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\obj\Debug\FifaMulti_v1.csprojResolveAssemblyReference.cache
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\obj\Debug\FifaMulti_v1.Form1.resources
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\obj\Debug\FifaMulti_v1.Properties.Resources.resources
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\obj\Debug\FifaMulti_v1.csproj.GenerateResource.Cache
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\obj\Debug\FifaMulti_v1.exe
+c:\users\anuj_2\documents\visual studio 2012\Projects\FifaMulti_v1\FifaMulti_v1\obj\Debug\FifaMulti_v1.pdb
