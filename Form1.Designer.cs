@@ -35,6 +35,7 @@
             this.serverClose_button = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.StatusBarLabel = new System.Windows.Forms.ToolStripLabel();
+            this.IconLabel = new System.Windows.Forms.ToolStripLabel();
             this.TabController = new System.Windows.Forms.TabControl();
             this.server_tab = new System.Windows.Forms.TabPage();
             this.keymapping_tab = new System.Windows.Forms.TabPage();
@@ -58,7 +59,7 @@
             // Disconnect
             // 
             this.Disconnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Disconnect.Location = new System.Drawing.Point(745, 69);
+            this.Disconnect.Location = new System.Drawing.Point(991, 69);
             this.Disconnect.Name = "Disconnect";
             this.Disconnect.Size = new System.Drawing.Size(98, 23);
             this.Disconnect.TabIndex = 4;
@@ -74,13 +75,13 @@
             this.ipaddress_textbox.Location = new System.Drawing.Point(3, 3);
             this.ipaddress_textbox.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
             this.ipaddress_textbox.Name = "ipaddress_textbox";
-            this.ipaddress_textbox.Size = new System.Drawing.Size(853, 20);
+            this.ipaddress_textbox.Size = new System.Drawing.Size(1099, 20);
             this.ipaddress_textbox.TabIndex = 0;
             // 
             // connect_button
             // 
             this.connect_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.connect_button.Location = new System.Drawing.Point(744, 42);
+            this.connect_button.Location = new System.Drawing.Point(990, 42);
             this.connect_button.Name = "connect_button";
             this.connect_button.Size = new System.Drawing.Size(97, 23);
             this.connect_button.TabIndex = 1;
@@ -100,19 +101,30 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.toolStrip1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StatusBarLabel});
+            this.StatusBarLabel,
+            this.IconLabel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(867, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1113, 25);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // StatusBarLabel
             // 
+            this.StatusBarLabel.ForeColor = System.Drawing.Color.White;
             this.StatusBarLabel.Name = "StatusBarLabel";
-            this.StatusBarLabel.Size = new System.Drawing.Size(57, 22);
+            this.StatusBarLabel.Size = new System.Drawing.Size(65, 22);
             this.StatusBarLabel.Text = "Welcome";
+            // 
+            // IconLabel
+            // 
+            this.IconLabel.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.IconLabel.Name = "IconLabel";
+            this.IconLabel.Size = new System.Drawing.Size(21, 22);
+            this.IconLabel.Text = "n";
             // 
             // TabController
             // 
@@ -122,7 +134,7 @@
             this.TabController.Location = new System.Drawing.Point(0, 25);
             this.TabController.Name = "TabController";
             this.TabController.SelectedIndex = 0;
-            this.TabController.Size = new System.Drawing.Size(867, 508);
+            this.TabController.Size = new System.Drawing.Size(1113, 470);
             this.TabController.TabIndex = 10;
             // 
             // server_tab
@@ -135,10 +147,11 @@
             this.server_tab.Location = new System.Drawing.Point(4, 22);
             this.server_tab.Name = "server_tab";
             this.server_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.server_tab.Size = new System.Drawing.Size(859, 482);
+            this.server_tab.Size = new System.Drawing.Size(1105, 444);
             this.server_tab.TabIndex = 0;
             this.server_tab.Text = "Server Settings";
             this.server_tab.UseVisualStyleBackColor = true;
+            this.server_tab.Click += new System.EventHandler(this.server_tab_Click);
             // 
             // keymapping_tab
             // 
@@ -146,7 +159,7 @@
             this.keymapping_tab.Location = new System.Drawing.Point(4, 22);
             this.keymapping_tab.Name = "keymapping_tab";
             this.keymapping_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.keymapping_tab.Size = new System.Drawing.Size(859, 482);
+            this.keymapping_tab.Size = new System.Drawing.Size(341, 145);
             this.keymapping_tab.TabIndex = 1;
             this.keymapping_tab.Text = "KeyBoard Mapping";
             this.keymapping_tab.UseVisualStyleBackColor = true;
@@ -157,14 +170,14 @@
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(3, 3);
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(853, 476);
+            this.grid.Size = new System.Drawing.Size(335, 139);
             this.grid.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 533);
+            this.ClientSize = new System.Drawing.Size(1113, 495);
             this.Controls.Add(this.TabController);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
@@ -190,11 +203,12 @@
         private System.Windows.Forms.Button connect_button;
         private System.Windows.Forms.Button serverClose_button;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel StatusBarLabel;
         private System.Windows.Forms.TabControl TabController;
         private System.Windows.Forms.TabPage server_tab;
         private System.Windows.Forms.TabPage keymapping_tab;
         private System.Windows.Forms.FlowLayoutPanel grid;
+        public System.Windows.Forms.ToolStripLabel IconLabel;
+        public System.Windows.Forms.ToolStripLabel StatusBarLabel;
 
 
 

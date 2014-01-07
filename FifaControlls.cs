@@ -40,31 +40,7 @@ namespace FifaMulti_v1
 
             getSendCode = new int[256];
             getSendCode = Enumerable.Repeat(+0, 256).ToArray();
-          /*
-            getSendCode[(int)Keys.I] = (int)Buttons.Up;
-            getSendCode[(int)Keys.K] = (int)Buttons.Down;
-            getSendCode[(int)Keys.J] = (int)Buttons.Left;
-            getSendCode[(int)Keys.L] = (int)Buttons.Right;
-            getSendCode[(int)Keys.NumPad8] = (int)Buttons.RUp;
-            getSendCode[(int)Keys.NumPad2] = (int)Buttons.RDown;
-            getSendCode[(int)Keys.NumPad4] = (int)Buttons.RLeft;
-            getSendCode[(int)Keys.NumPad6] = (int)Buttons.RRight;
-            getSendCode[(int)Keys.T] = (int)Buttons.ZUp;
-            getSendCode[(int)Keys.G] = (int)Buttons.ZDown;
-            getSendCode[(int)Keys.F] = (int)Buttons.ZLeft;
-            getSendCode[(int)Keys.H] = (int)Buttons.ZRight;
-            getSendCode[(int)Keys.D1] = (int)Buttons.A;
-            getSendCode[(int)Keys.D2] = (int)Buttons.B;
-            getSendCode[(int)Keys.D3] = (int)Buttons.X;
-            getSendCode[(int)Keys.D4] = (int)Buttons.Y;
-            getSendCode[(int)Keys.D5] = (int)Buttons.L;
-            getSendCode[(int)Keys.D6] = (int)Buttons.R;
-            getSendCode[(int)Keys.D7] = (int)Buttons.LB;
-            getSendCode[(int)Keys.D8] = (int)Buttons.LT;
-            getSendCode[(int)Keys.D9] = (int)Buttons.RB;
-            getSendCode[(int)Keys.D0] = (int)Buttons.RT;
-            getSendCode[(int)Keys.P] = (int)Buttons.Start;
-            getSendCode[(int)Keys.OemMinus] = (int)Buttons.Back;*/
+       
             for (int i = 1; i < 25; i++)
             {
                 StringBuilder data = new StringBuilder();
@@ -79,7 +55,7 @@ namespace FifaMulti_v1
         public static void updateFifaControls(UInt32 data)
         {
             short position=1;
-            while (position != 26 && data+1 >= (0x01 << (position - 1)))
+            while (position != 26)// &&  data+1 >= (0x01 << (position - 1)))
             {
                 short value = (short)((data & (0x01 << (position - 1))) >> (position - 1));
                 switch (position)
